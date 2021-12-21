@@ -1,9 +1,16 @@
 function calcular(tipo, valor){
-    if(tipo === 'acao'){
 
+    if(tipo === 'acao'){
         if( valor == 'c'){
             //limpar o visor
-            document.getElementById('resultado').value = ''
+             document.getElementById('resultado').value = ''
+        }
+
+        if( valor == 'x'){
+            var apagar_caracter =  document.getElementById('resultado').value
+            var apagar_caracter2 = apagar_caracter.slice(0, -1)
+
+            document.getElementById('resultado').value = apagar_caracter2
         }
 
         if( valor === '+' || valor === '-' || valor === '*' || valor === '/' || valor === '.'){
